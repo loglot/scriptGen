@@ -14,5 +14,10 @@ Here are all of the escape sequences
 .:/.:/:.:.  :  disables escape sequences when put in them
 
 # Examples/|n/;
-<a href=./script.txt>This Script</a>
+<a href=./examples/script.txt>This info "Script"</a>
 <a href=./examples/yazi.txt>Yazi Temporary Run Script</a>
+
+# Versions/|n/;
+<a href=./index.html>styled</a>
+<a href=./minimal.html>minimal styling</a>
+<a href=./minified.html>unstyled</a>

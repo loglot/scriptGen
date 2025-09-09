@@ -2,7 +2,8 @@ var text
 var script
 var number = 0
 var enabled=[]
-fetch('./script.txt')
+var showfile=false
+fetch('./examples/script.txt')
   .then(response => response.text())
   .then((data) => {
     text=(data)
@@ -16,6 +17,7 @@ function tick(){
     requestAnimationFrame(tick)
 }
 function init(){
+        scriptinput.style.display='none'
     enabled = []
     var Selection=""
     if(scriptinput.value==""){
@@ -68,5 +70,11 @@ function copy() {
 alert("Copied the script to the clipboard!")
 }
 function change(){
-    init()
+    if(showfile){
+        init()
+        showfile=false
+    } else{
+        showfile=true
+        scriptinput.style.display='block'
+    }
 }

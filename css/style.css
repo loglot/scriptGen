@@ -2,8 +2,12 @@
     background-color: rgba(0, 0, 0, 0.562);
     color:white;
     padding:30px;
-    max-width: fit-content;
+    width: 60vw;
+
     border-radius: 20px;
+    margin:auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 .container{
     background-color: rgba(255, 255, 255, 0.335);
@@ -30,6 +34,23 @@
     transform:translateX(-50%);
     /* width:10px; */
 }
+button{
+    padding:10px;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.459);
+    border-radius: 10px;
+}
 a{
     color:rgb(192, 131, 250);
+}html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
 }
