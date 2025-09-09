@@ -1,6 +1,6 @@
 # Ctrl-alt-shift to enter clipboard /|n/;
 
-# make config /|n/;
+# make config /|y/;
 mkdir ~/.config/yazi
 
 # show hidden files __REQ make config /|n/;
@@ -8,7 +8,7 @@ touch ~/.config/yazi/yazi.toml
 echo [mgr] >> ~/.config/yazi/yazi.toml
 echo show_hidden = true >> ~/.config/yazi/yazi.toml
 
-# disable nerdfonts icons __REQ make config /|n/;
+# disable nerdfonts icons __REQ make config /|y/;
 touch ~/.config/yazi/theme.toml
 echo [status] >> ~/.config/yazi/theme.toml
 echo sep_left = { open = \"\", close = \"\" } >> ~/.config/yazi/theme.toml
@@ -30,7 +30,7 @@ unzip .y.zip -d .y
 rm -rf .y
 rm -rf .y.zip
 
-# remove config __REQ make config /|n/;
+# remove config __REQ make config /|y/;
 rm -rf ~/.config/yazi
 
 # clear screen /|y/;
