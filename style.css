@@ -1,0 +1,35 @@
+.op{
+    background-color: rgba(0, 0, 0, 0.562);
+    color:white;
+    padding:30px;
+    max-width: fit-content;
+    border-radius: 20px;
+}
+.container{
+    background-color: rgba(255, 255, 255, 0.335);
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    padding:30px;
+    max-width: fit-content;
+    border-radius: 20px;
+    margin:50px;
+}
+.buttons{
+    position:relative;
+    left:50%;
+    transform:translateX(-50%);
+    width:fit-content;
+
+}
+.script{
+    
+    margin-top:10px;
+    position:relative;
+    left:50%;
+    transform:translateX(-50%);
+    /* width:10px; */
+}
+a{
+    color:rgb(192, 131, 250);
+}

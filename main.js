@@ -9,15 +9,19 @@ fetch('./script.txt')
     init()
   })
 var output=document.getElementById("output")
+var scriptinput=document.getElementById("script")
 var selection=document.getElementById("selection")
 function tick(){
 
     requestAnimationFrame(tick)
 }
 function init(){
+    enabled = []
     var Selection=""
-
-    script = text.split("#")
+    if(scriptinput.value==""){
+        scriptinput.value=text
+    }
+    script = scriptinput.value.split("#")
     for(let i = 0; i < script.length; i++){
         script[i]=script[i].split("/|")
         if(script[i][1]){
@@ -50,11 +54,19 @@ function drawText(){
 
     for(let i = 0; i<script.length;i++){
         if(enabled[i]){
-            finalString=finalString+"<br>#"+script[i][0]
-            for(let z=0;z<script[i][2].length;z++){
-                finalString=finalString+"<br>"+script[i][2][z]
+            finalString=finalString+"#"+script[i][0]
+            for(let z=1;z<script[i][2].length;z++){
+                finalString=finalString+"<br>"+script[i][2][z].replaceAll("/:h","#").replaceAll(".:/:.","")
             }
         }
     }
     output.innerHTML=finalString
+}
+function copy() {
+  var copyText = document.getElementById("output");
+  navigator.clipboard.writeText(copyText.innerHTML.replaceAll("<br>","\n"));
+alert("Copied the script to the clipboard!")
+}
+function change(){
+    init()
 }
