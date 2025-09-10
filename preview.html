@@ -1,0 +1,16 @@
+<p id="preview"></p>
+<script>
+let params = new URLSearchParams(document.location.search);
+    var preview = document.getElementById("preview")
+    var text
+    preview.innerHTML="loading "+params.get("p")+"..."
+    fetch(params.get("p"))
+    .then(response => response.text())
+    .then((data) => {
+        text=(data)
+        init()
+    })
+    function init(){
+        preview.innerHTML=text.replaceAll("<","&lt").replaceAll("\n", "<br>")
+    }
+</script>
