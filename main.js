@@ -66,7 +66,7 @@ function drawText(){
 }
 function copy() {
   var copyText = document.getElementById("output");
-  navigator.clipboard.writeText(copyText.innerHTML.replaceAll("<br>","\n"));
+  navigator.clipboard.writeText(copyText.innerHTML.replaceAll("<br>","\n").replaceAll("&gt;",">"));
 alert("Copied the script to the clipboard!")
 }
 function change(){

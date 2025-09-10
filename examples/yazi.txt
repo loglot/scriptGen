@@ -1,15 +1,20 @@
-# info __don't leave enabled /|n/;
+# Yazi Volitile /|y/;
+    /:h a script to run yazi, removes itself after it's completed
 
 # make config /|n/;
 mkdir ~/.config/yazi
-
-# show hidden files __REQ make config /|n/;
 touch ~/.config/yazi/yazi.toml
-echo [mgr] >> ~/.config/yazi/yazi.toml
-echo show_hidden = true >> ~/.config/yazi/yazi.toml
+touch ~/.config/yazi/theme.toml
+
+# enable non vim editors __REQ make config /|n/;
+echo [opener] >> ~/.config/yazi/yazi.toml
+echo edit = [ >> ~/.config/yazi/yazi.toml
+echo { run = \'nano \"\$\@\"\', block = true, desc=\"Nano\"}, >> ~/.config/yazi/yazi.toml
+echo { run = \'code -n \"\$\@\"\', block = true, desc=\"VS Code\"}, >> ~/.config/yazi/yazi.toml
+echo { run = \'vi \"\$\@\"\', block = true, desc=\"VI Improved\"}, >> ~/.config/yazi/yazi.toml
+echo ] >> ~/.config/yazi/yazi.toml
 
 # disable nerdfonts icons __REQ make config /|n/;
-touch ~/.config/yazi/theme.toml
 echo [status] >> ~/.config/yazi/theme.toml
 echo sep_left = { open = \"\", close = \"\" } >> ~/.config/yazi/theme.toml
 echo sep_right = { open = \"\", close = \"\" } >> ~/.config/yazi/theme.toml
@@ -33,5 +38,5 @@ rm -rf .y.zip
 # remove config __REQ make config /|n/;
 rm -rf ~/.config/yazi
 
-# clear screen /|y/;
+# clear screen /|n/;
 clear

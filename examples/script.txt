@@ -5,6 +5,8 @@ a simple script generator
 a tool to help make scripts from parent script files
 this tool splits scripts into different toggleable segments
 
+if no script is provided, it will default to this info script
+
 Here are all of the escape sequences
 /:h  : The Main Splitter;  this splits the code segmants
 /.:/:.|y  : Enable By Default 
