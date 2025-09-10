@@ -20,8 +20,8 @@ ScriptGen Uses .s3g (stupid simple script generator) files
 .s3g files contain the script generator
 
 # Examples/|n/;
-<a href=/preview.html?p=./examples/script.s3g>This info "Script"</a>
-<a href=/preview.html?p=./examples/yazi.s3g>Yazi Temporary Run Script</a>
+<a target="_blank" href=/preview.html?p=./examples/script.s3g>This info "Script"</a>
+<a target="_blank" href=/preview.html?p=./examples/yazi.s3g>Yazi Temporary Run Script</a>
 
 # Versions/|n/;
 <a href=./index.html>styled</a>
