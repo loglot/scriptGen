@@ -3,7 +3,7 @@ var script
 var number = 0
 var enabled=[]
 var showfile=false
-fetch('./examples/script.txt')
+fetch('./examples/script.s3g')
   .then(response => response.text())
   .then((data) => {
     text=(data)
