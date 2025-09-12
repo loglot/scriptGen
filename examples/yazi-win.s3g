@@ -1,0 +1,15 @@
+# Yazi Volitile /|y/;
+    /:h a script to run yazi, but on windows!, removes itself after it's completed
+
+
+# start yazi /|y/;
+wget -O .y.zip https://github.com/sxyazi/yazi/releases/download/v25.5.31/yazi-x86_64-pc-windows-msvc.zip 
+expand-archive .y.zip -d .y
+.y/yazi-x86_64-pc-windows-msvc/yazi
+
+# clean working directory /|y/;
+rm -r -fo .y
+rm -r -fo .y.zip
+
+# clear screen /|n/;
+clear
