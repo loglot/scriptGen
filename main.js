@@ -68,7 +68,7 @@ function init(){
     drawText()
     // requestAnimationFrame(tick)
 }
-function checkClick(i){
+window.checkClick=(i) => {
     enabled[i]=!enabled[i]
     console.log(enabled)
     drawText()
