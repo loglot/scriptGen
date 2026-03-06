@@ -3,15 +3,37 @@ var script
 var number = 0
 var enabled=[]
 var showfile=false
-fetch('./examples/script.s3g')
-  .then(response => response.text())
-  .then((data) => {
-    text=(data)
-    init()
-  })
+
 var output=document.getElementById("output")
 var scriptinput=document.getElementById("script")
 var selection=document.getElementById("selection")
+import { addPondiverseButton } from "https://www.pondiverse.com/pondiverse.js";
+
+addPondiverseButton(() => {
+  return {
+    type: "s3g",
+    data: text,
+    // image: canvas?.toDataURL("image/png"),
+  };
+});
+import { fetchPondiverseCreation } from "https://www.pondiverse.com/pondiverse.js";
+
+const creationParam = new URL(window.location).searchParams.get("id");
+if (creationParam) {
+  const creation = await fetchPondiverseCreation(creationParam);
+  alert(JSON.stringify(creation))
+  text=creation.data
+  alert(text)
+  init()
+}else{
+    fetch('./examples/script.s3g')
+    .then(response => response.text())
+    .then((data) => {
+        text=(data)
+        init()
+    })
+
+}
 function tick(){
 
     requestAnimationFrame(tick)
@@ -64,12 +86,12 @@ function drawText(){
     }
     output.innerHTML=finalString
 }
-function copy() {
+window.copy=() => {
   var copyText = document.getElementById("output");
   navigator.clipboard.writeText(copyText.innerHTML.replaceAll("<br>","\n").replaceAll("&gt;",">"));
 alert("Copied the script to the clipboard!")
 }
-function change(){
+window.change=() => {
     if(showfile){
         init()
         showfile=false
